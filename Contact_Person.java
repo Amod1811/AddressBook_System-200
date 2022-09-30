@@ -3,7 +3,7 @@ package bl.com.addressbooksystem200;
 public class Contact_Person {
 	private String firstname;
 	private String lastname;
-	private int mobilenumber;
+	private String mobilenumber;
 	private String email;
 	private String city;
 	private String state;
@@ -33,11 +33,11 @@ public class Contact_Person {
 		this.lastname = lastname;
 	}
 
-	public int getMobilenumber() {
+	public String getMobilenumber() {
 		return mobilenumber;
 	}
 
-	public void setMobilenumber(int mobilenumber) {
+	public void setMobilenumber(String mobilenumber) {
 		this.mobilenumber = mobilenumber;
 	}
 
