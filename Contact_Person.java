@@ -16,7 +16,6 @@ public class Contact_Person {
 		this.city = city;
 		this.state = state;
 		
-		
 	}
 	public String getFirstname() {
 		return firstname;
