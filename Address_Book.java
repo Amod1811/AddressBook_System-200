@@ -6,7 +6,7 @@ public class Address_Book {
 	Contact_Person contact;
 	private String firstname;
 	private String lastname;
-	private int mobilenumber;
+	private String mobilenumber;
 	private String email;
 	private String city;
 	private String state;
@@ -19,7 +19,7 @@ public class Address_Book {
 		System.out.println("Enter the Last Name");
 		lastname = sc.nextLine();
 		System.out.println("Enter the Mobile Number");
-		mobilenumber = sc.nextInt();
+		mobilenumber = sc.next();
 		System.out.println("Enter the Email Address");
 		email = sc.next();
 		System.out.println("Enter the City");
@@ -42,7 +42,7 @@ public class Address_Book {
 		System.out.println("First Name:" + firstname1);
 		String lastname1 = contact.getLastname();
 		System.out.println("Last Name:" + lastname1);
-		int mobile = contact.getMobilenumber();
+		String mobile = contact.getMobilenumber();
 		System.out.println("Mobile Number:" + mobile);
 		String city1 = contact.getCity();
 		System.out.println("City Name:" + city1);
@@ -65,6 +65,28 @@ public class Address_Book {
 			System.out.println("Please Enter Valid First Name");
 			System.out.println();
 			editContact();
+		}
+	}
+
+	public void deletecontact() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please Enter original Name to Delete");
+		String deleteName = sc.next();
+		
+		if(deleteName.equals(contact.getFirstname())) {
+			contact.setFirstname(null);
+	        contact.setLastname(null);
+	        contact.setCity(null);
+	        contact.setState(null);
+	        contact.setMobilenumber(null);
+	        contact.setEmail(null);
+	        System.out.println("Contact deleted Successfully");
+	        System.out.println();
+		}else {
+			System.out.println("Invalid first name");
+			System.out.println("Please Enter Valid First Name");
+			System.out.println();
+			deletecontact();
 		}
 	}
 }
