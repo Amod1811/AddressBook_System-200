@@ -13,7 +13,8 @@ public class AddressBook_Main {
 		do {
 			System.out.println("Enter Your Choice" + "\n1. Add Contact"
 					+ "\n2. Display Contact"
-					+ "\n3. Edit Contact");
+					+ "\n3. Edit Contact"
+					+ "\n4. Delete Contact");
 			int option = sc.nextInt();
 			switch (option) {
 			case 1:
@@ -22,6 +23,8 @@ public class AddressBook_Main {
 			case 2: addressbook.displayContact();
 				break;
 			case 3:  addressbook.editContact();
+			break;
+			case 4:addressbook.deletecontact();
 			break;
 			default:
 				System.out.println("Enter the valid choice");
