@@ -8,13 +8,17 @@ public class Contact_Person {
 	private String city;
 	private String state;
 
-	public Contact_Person() {
+	public Contact_Person(String firstname, String lastname, String mobilenumber, String email, String city, String state) {
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.mobilenumber = mobilenumber;
 		this.email = email;
 		this.city = city;
 		this.state = state;
+	}
+
+	public Contact_Person() {
+		
 	}
 
 	public String getFirstname() {
